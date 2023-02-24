@@ -1,0 +1,4 @@
+ba -> a
+bb -> b
+ab -> eps
+eps ->. b
