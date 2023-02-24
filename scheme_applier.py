@@ -22,9 +22,9 @@ def apply_scheme(scheme, word):
         word = ""
 
     if word == "":
-        print(eps, '=>', end=' ')
+        print(eps, end='')
     else:
-        print(word, '=>', end=' ')
+        print(word, end='')
 
     # проход по подстановкам
     for substitution in scheme:
@@ -44,6 +44,7 @@ def apply_scheme(scheme, word):
 
         # подстановку можно применить
         if word.find(item_to_replace) != -1:
+            print(" => ", end="")
             word = word.replace(item_to_replace, replacement, 1)
             if not final:
                 apply_scheme(scheme, word)
@@ -55,7 +56,7 @@ def apply_scheme(scheme, word):
             break
     # схема не применима
     else:
-        print("\b\b\b")
+        print()
 
 
 if __name__ == "__main__":
